@@ -14,8 +14,8 @@ const StackNavigator = () => {
       headerMode="none"
       initialRouteName="home"
       screenOptions={{
-        gestureEnabled: true,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        cardStyleInterpolator:
+          CardStyleInterpolators.forRevealFromBottomAndroid,
       }}>
       <Stack.Screen name="home" component={TabNavigator} />
       <Stack.Screen name="movie" component={MovieDetail} />

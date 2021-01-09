@@ -2,7 +2,8 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home, ComingSoon, OfflineWatch} from '../screens';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {withTheme} from 'react-native-paper';
+import FeatherIcon from 'react-native-vector-icons/Feather';
+import {withTheme,Colors} from 'react-native-paper';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,21 +14,20 @@ const TabNavigator = ({theme}) => {
       initialRouteName="home"
       tabBarOptions={{
         showLabel: false,
-        activeTintColor: colors.accent,
+        activeTintColor: Colors.red700,
         inactiveTintColor: colors.light,
         activeBackgroundColor: colors.otherBlack,
         style: {
           backgroundColor: colors.grey,
           width: '90%',
           position: 'absolute',
-          bottom: '3%',
+          bottom: '1%',
           left: '5%',
           right: '5%',
           height: '7%',
           borderRadius: 50,
           elevation: 0,
-          borderColor: colors.grey,
-          borderWidth: 0,
+          borderTopWidth: 0,
         },
         tabStyle: {
           borderRadius: 50,
@@ -46,7 +46,7 @@ const TabNavigator = ({theme}) => {
         name="coming_soon"
         component={ComingSoon}
         options={{
-          tabBarIcon: ({color}) => <Icon name="play" color={color} size={26} />,
+          tabBarIcon: ({color}) => <FeatherIcon name="youtube" color={color} size={26} />,
         }}
       />
       <Tab.Screen
@@ -54,7 +54,7 @@ const TabNavigator = ({theme}) => {
         component={OfflineWatch}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name="download" color={color} size={26} />
+            <FeatherIcon name="download" color={color} size={26} />
           ),
         }}
       />
