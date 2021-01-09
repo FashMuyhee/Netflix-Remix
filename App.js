@@ -14,16 +14,12 @@ const fontConfig = {
       fontWeight: '800',
     },
     medium: {
-      fontFamily: 'Montserrat-Medium',
-      fontWeight: '600',
+      fontFamily: 'Montserrat-Bold',
+      fontWeight: 'bold',
     },
     light: {
       fontFamily: 'Montserrat-Light',
       fontWeight: 'light',
-    },
-    thin: {
-      fontFamily: 'Montserrat-Bold',
-      fontWeight: '300',
     },
   },
 };
@@ -49,10 +45,10 @@ export default function App() {
   return (
     <PaperProvider theme={theme}>
       <StatusBar
-        backgroundColor={theme.colors.grey}
+        backgroundColor={theme.colors.black}
         barStyle="light-content"
       />
-      {/* <Navigator /> */}
+      <Navigator />
     </PaperProvider>
   );
 }
